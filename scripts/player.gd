@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
+@export_range(0.0, 1.0) var acceleration = 0.25
+@export_range(0.0, 1.0) var friction = 0.1
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -43,8 +45,9 @@ func _physics_process(delta):
 		
 	
 	if direction:
-		velocity.x = direction * SPEED
+		#velocity.x = direction * SPEED
+		velocity.x = lerp(velocity.x, direction * SPEED, acceleration)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = lerp(velocity.x, 0.0, friction)
 
 	move_and_slide()

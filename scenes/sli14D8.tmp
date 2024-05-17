@@ -43,7 +43,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swo7c"]
 size = Vector2(8, 11)
 
-[node name="Slime" type="Node2D"]
+[node name="Slime" type="Area2D"]
 script = ExtResource("1_l2fc1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -65,11 +65,3 @@ target_position = Vector2(9, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, 5)
 target_position = Vector2(-10, 0)
-
-[node name="RayCastDownLeft" type="RayCast2D" parent="."]
-position = Vector2(-7, 10)
-target_position = Vector2(0, 14)
-
-[node name="RayCastDownRight" type="RayCast2D" parent="."]
-position = Vector2(7, 10)
-target_position = Vector2(0, 14)

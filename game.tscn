@@ -565,6 +565,9 @@ autoplay = "RESET"
 [node name="Slime" parent="." instance=ExtResource("6_osven")]
 position = Vector2(250, -139)
 
+[node name="Slime2" parent="." instance=ExtResource("6_osven")]
+position = Vector2(184, -27)
+
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
